@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-        <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
-        <!-- <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
-        <script type="text/javascript" src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-    </head>
-    <body>
-        
-    </body>
+    <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script type="text/javascript" src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+
+<body>
+    <div id="table">
+        <div>
+            <table class="table table-bordered table-hover" style="width: 300px">
+                <thead>
+                    <tr>
+                        <td>
+                            A
+                        </td>
+                        <td>
+                            B
+                        </td>
+                        <td>
+                            Delete
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in table">
+                        <td>
+                            {{item.A}}
+                        </td>
+                        <td>
+                            {{item.B}}
+                        </td>
+                        <td>
+                            <button v-on:click="DeleteItem(item)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
 </html>
